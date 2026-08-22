@@ -8,8 +8,12 @@
 *{margin:0;padding:0;box-sizing:border-box;}
 html,body{width:100%;overflow-x:hidden;background:#0F1117;color:#E8EAF0;font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;font-size:16px;}
 header{background:#181C27;border-bottom:1px solid rgba(255,255,255,0.07);padding:20px 16px 16px;}
-header h1{font-size:22px;font-weight:300;letter-spacing:-0.5px;}
+header h1{font-size:22px;font-weight:300;letter-spacing:-0.5px;display:inline-block;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+header h1:active{opacity:0.6;}
 header h1 em{color:#4ECDC4;font-style:italic;}
+.last-wk{margin-top:8px;font-size:12px;color:#9BA3B8;cursor:pointer;-webkit-tap-highlight-color:transparent;}
+.last-wk span{color:#4ECDC4;font-weight:600;}
+.last-wk:active{opacity:0.6;}
 header p{font-size:13px;color:#5C6478;margin-top:3px;}
 .tabs{background:#181C27;border-bottom:1px solid rgba(255,255,255,0.07);display:flex;overflow-x:auto;padding:0 10px;position:sticky;top:0;z-index:100;}
 .tabs::-webkit-scrollbar{display:none;}
@@ -23,7 +27,7 @@ header p{font-size:13px;color:#5C6478;margin-top:3px;}
 .dl{font-size:20px;color:#4ECDC4;font-weight:300;}
 .ds{font-size:10px;color:#5C6478;margin-top:2px;text-transform:uppercase;letter-spacing:0.05em;}
 .date-row{margin-bottom:13px;}
-.date-row input{width:100%;background:#181C27;border:1px solid rgba(255,255,255,0.13);border-radius:10px;padding:11px 13px;color:#E8EAF0;font-family:inherit;font-size:14px;outline:none;}
+.date-row input{width:100%;background:#181C27;border:1px solid rgba(255,255,255,0.13);border-radius:10px;padding:11px 13px;color:#E8EAF0;font-family:inherit;font-size:16px;outline:none;}
 .sh{font-size:10px;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;margin:18px 0 9px;display:flex;align-items:center;gap:8px;}
 .sh::after{content:'';flex:1;height:1px;background:rgba(255,255,255,0.07);}
 .sh-w{color:#F5C842;}.sh-m{color:#4ECDC4;}.sh-s{color:#E8856A;}.sh-c{color:#4ECDC4;}
@@ -52,11 +56,12 @@ header p{font-size:13px;color:#5C6478;margin-top:3px;}
 .sg2{grid-template-columns:1fr 1fr;}
 .sg3{grid-template-columns:1fr 1fr 1fr;}
 .si label{font-size:10px;color:#5C6478;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:0.05em;}
-.si input{width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:9px 4px;color:#E8EAF0;font-family:inherit;font-size:15px;font-weight:600;text-align:center;outline:none;}
+.si input{width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:9px 4px;color:#E8EAF0;font-family:inherit;font-size:16px;font-weight:600;text-align:center;outline:none;}
+.si input.rep-mini{padding:6px 4px;font-size:16px;font-weight:500;background:#181C27;margin-bottom:5px;}
 .si input:focus{border-color:#4ECDC4;}
 .nr{margin:0 13px 11px;}
 .nr label{font-size:10px;color:#5C6478;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:0.05em;}
-.nr input{width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:8px 10px;color:#E8EAF0;font-family:inherit;font-size:13px;outline:none;}
+.nr input{width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.07);border-radius:8px;padding:8px 10px;color:#E8EAF0;font-family:inherit;font-size:16px;outline:none;}
 .save-btn{width:100%;background:#4ECDC4;color:#0F1117;border:none;border-radius:12px;padding:15px;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;margin-top:10px;}
 .sp-row{background:#181C27;border:1px solid rgba(255,255,255,0.07);border-radius:11px;padding:13px 15px;margin-bottom:13px;display:flex;align-items:center;gap:13px;}
 .sp-n{font-size:24px;color:#4ECDC4;font-weight:300;}
@@ -112,11 +117,12 @@ header p{font-size:13px;color:#5C6478;margin-top:3px;}
 .msg2{grid-template-columns:1fr 1fr;}
 .msg3{grid-template-columns:1fr 1fr 1fr;}
 .msg label{font-size:10px;color:#5C6478;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:0.05em;}
-.msg input{width:100%;background:#0F1117;border:1px solid rgba(255,255,255,0.13);border-radius:7px;padding:8px 5px;color:#E8EAF0;font-family:inherit;font-size:14px;font-weight:600;text-align:center;outline:none;}
+.msg input{width:100%;background:#0F1117;border:1px solid rgba(255,255,255,0.13);border-radius:7px;padding:8px 5px;color:#E8EAF0;font-family:inherit;font-size:16px;font-weight:600;text-align:center;outline:none;}
+.msg input.rep-mini{padding:6px 5px;font-size:16px;font-weight:500;margin-bottom:5px;}
 .msg input:focus{border-color:#4ECDC4;}
 .mnr{margin:0 13px 10px;}
 .mnr label{font-size:10px;color:#5C6478;display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:0.05em;}
-.mnr input{width:100%;background:#0F1117;border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:8px 10px;color:#E8EAF0;font-family:inherit;font-size:13px;outline:none;}
+.mnr input{width:100%;background:#0F1117;border:1px solid rgba(255,255,255,0.07);border-radius:7px;padding:8px 10px;color:#E8EAF0;font-family:inherit;font-size:16px;outline:none;}
 .msave{width:100%;background:#4ECDC4;color:#0F1117;border:none;border-radius:11px;padding:14px;font-family:inherit;font-size:15px;font-weight:700;cursor:pointer;margin-top:8px;}
 .exp-area{background:#181C27;border:1px solid rgba(255,255,255,0.07);border-radius:13px;padding:16px;margin-bottom:13px;}
 .exp-area h3{font-size:15px;font-weight:600;margin-bottom:7px;}
@@ -127,7 +133,7 @@ header p{font-size:13px;color:#5C6478;margin-top:3px;}
 .imp-area{background:#181C27;border:1px solid rgba(255,255,255,0.07);border-radius:13px;padding:16px;}
 .imp-area h3{font-size:15px;font-weight:600;margin-bottom:7px;}
 .imp-area p{font-size:13px;color:#9BA3B8;line-height:1.6;margin-bottom:11px;}
-.imp-area textarea{width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:9px;padding:10px;color:#E8EAF0;font-family:monospace;font-size:11px;min-height:80px;outline:none;resize:vertical;}
+.imp-area textarea{width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:9px;padding:10px;color:#E8EAF0;font-family:monospace;font-size:16px;min-height:80px;outline:none;resize:vertical;}
 .stat-cards{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:15px;}
 .stat-card{background:#181C27;border:1px solid rgba(255,255,255,0.07);border-radius:11px;padding:13px 14px;}
 .stat-card .sn{font-size:22px;color:#4ECDC4;font-weight:300;}
@@ -154,8 +160,9 @@ header p{font-size:13px;color:#5C6478;margin-top:3px;}
 </head>
 <body>
 <header>
-  <h1>Workout <em>Tracker</em></h1>
+  <h1 id="home-title" role="button" tabindex="0">Workout <em>Tracker</em></h1>
   <p>Warm-up   Workout Stretching</p>
+  <div id="last-workout" class="last-wk"></div>
 </header>
 <div class="tabs">
   <div class="tab on" id="t-log"> Log</div>
@@ -223,6 +230,26 @@ header p{font-size:13px;color:#5C6478;margin-top:3px;}
     <textarea id="imp-area" placeholder="Paste JSON here..."></textarea>
     <button class="exp-btn" id="imp-btn" style="margin-top:8px;"> Import JSON</button>
   </div>
+  <div class="imp-area" style="margin-top:13px;">
+    <h3>Auto-Backup to GitHub</h3>
+    <p>Saves a copy to your repo automatically every time you log a workout - no manual export needed. Your token stays on this device and only talks to GitHub directly.</p>
+    <div class="nr" style="margin:0 0 8px;">
+      <label>GitHub Username</label>
+      <input type="text" id="gh-owner" placeholder="e.g. yourusername" autocapitalize="off" autocorrect="off">
+    </div>
+    <div class="nr" style="margin:0 0 8px;">
+      <label>Repository Name</label>
+      <input type="text" id="gh-repo" placeholder="e.g. tracker" autocapitalize="off" autocorrect="off">
+    </div>
+    <div class="nr" style="margin:0 0 8px;">
+      <label>Personal Access Token</label>
+      <input type="password" id="gh-token" placeholder="Paste fine-grained token here" autocapitalize="off" autocorrect="off">
+    </div>
+    <p style="font-size:11px;color:#5C6478;margin-bottom:11px;">Use a <strong style="color:#9BA3B8;">fine-grained</strong> token scoped to only this repo, with only "Contents: Read and write" permission - not a classic token with full account access. Create one at github.com/settings/tokens under "Fine-grained tokens."</p>
+    <button class="exp-btn" id="gh-save-btn"> Save Settings</button>
+    <button class="exp-btn" id="gh-backup-btn" style="margin-top:8px;"> Backup Now</button>
+    <div id="gh-status" style="font-size:12px;color:#5C6478;margin-top:9px;">Not configured</div>
+  </div>
 </div>
 <div id="tab-renpho" class="view">
   <div style="font-size:19px;font-weight:300;margin-bottom:4px;color:#E8EAF0;">Body <span style="color:#4ECDC4;font-style:italic;">Composition</span></div>
@@ -231,27 +258,27 @@ header p{font-size:13px;color:#5C6478;margin-top:3px;}
   <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:12px;">
     <div>
       <label style="font-size:10px;color:#5C6478;text-transform:uppercase;letter-spacing:0.05em;display:block;margin-bottom:4px;">Weight (lbs)</label>
-      <input type="number" id="r-weight" step="0.1" min="0" placeholder="e.g. 158.0" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:15px;font-weight:600;outline:none;">
+      <input type="number" id="r-weight" step="0.1" min="0" placeholder="e.g. 158.0" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:16px;font-weight:600;outline:none;">
     </div>
     <div>
       <label style="font-size:10px;color:#5C6478;text-transform:uppercase;letter-spacing:0.05em;display:block;margin-bottom:4px;">Body Fat %</label>
-      <input type="number" id="r-fat" step="0.1" min="0" max="100" placeholder="e.g. 32.5" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:15px;font-weight:600;outline:none;">
+      <input type="number" id="r-fat" step="0.1" min="0" max="100" placeholder="e.g. 32.5" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:16px;font-weight:600;outline:none;">
     </div>
     <div>
       <label style="font-size:10px;color:#5C6478;text-transform:uppercase;letter-spacing:0.05em;display:block;margin-bottom:4px;">Skeletal Muscle %</label>
-      <input type="number" id="r-muscle" step="0.1" min="0" max="100" placeholder="e.g. 28.3" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:15px;font-weight:600;outline:none;">
+      <input type="number" id="r-muscle" step="0.1" min="0" max="100" placeholder="e.g. 28.3" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:16px;font-weight:600;outline:none;">
     </div>
     <div>
       <label style="font-size:10px;color:#5C6478;text-transform:uppercase;letter-spacing:0.05em;display:block;margin-bottom:4px;">Visceral Fat Level</label>
-      <input type="number" id="r-visceral" step="0.5" min="0" placeholder="e.g. 7.0" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:15px;font-weight:600;outline:none;">
+      <input type="number" id="r-visceral" step="0.5" min="0" placeholder="e.g. 7.0" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:16px;font-weight:600;outline:none;">
     </div>
     <div>
       <label style="font-size:10px;color:#5C6478;text-transform:uppercase;letter-spacing:0.05em;display:block;margin-bottom:4px;">BMR (kcal)</label>
-      <input type="number" id="r-bmr" step="1" min="0" placeholder="e.g. 1420" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:15px;font-weight:600;outline:none;">
+      <input type="number" id="r-bmr" step="1" min="0" placeholder="e.g. 1420" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:16px;font-weight:600;outline:none;">
     </div>
     <div>
       <label style="font-size:10px;color:#5C6478;text-transform:uppercase;letter-spacing:0.05em;display:block;margin-bottom:4px;">BMI</label>
-      <input type="number" id="r-bmi" step="0.1" min="0" placeholder="e.g. 24.1" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:15px;font-weight:600;outline:none;">
+      <input type="number" id="r-bmi" step="0.1" min="0" placeholder="e.g. 24.1" style="width:100%;background:#1F2436;border:1px solid rgba(255,255,255,0.13);border-radius:8px;padding:10px;color:#E8EAF0;font-family:inherit;font-size:16px;font-weight:600;outline:none;">
     </div>
   </div>
   <button class="save-btn" id="r-save-btn">Save Body Metrics</button>
@@ -282,25 +309,25 @@ var D = {
     label: 'Day A - Lower Body (Glutes + Quads + Knee)',
     warmup: [
       {id:'wa1', name:'Treadmill Warm-Up', hint:'Brisk walk, 1-2% incline only', time:'10 min', vid:'https://www.youtube.com/results?search_query=treadmill+warm+up+walk'},
-      {id:'wa2', name:'TKE with Band', hint:'Face anchor, soft knee bend, straighten against resistance - VMO activation', time:'15 reps / side', vid:'https://www.youtube.com/watch?v=SM-gh-ztwZU'},
-      {id:'wa3', name:'Glute Bridge (bodyweight)', hint:'Drive hips up, squeeze hard at top', time:'10 reps', vid:'https://www.youtube.com/watch?v=wPM8icPu6H8'},
-      {id:'wa4', name:'Box Squat (bodyweight, 3 sec down)', hint:'Knees track over 2nd toe, stop at 90 degrees', time:'10 reps', vid:'https://www.youtube.com/watch?v=DC0SyJGTVIE'},
-      {id:'wa5', name:'Hip Abductions (band)', hint:'Standing, controlled movement out and back', time:'12 reps / side', vid:'https://www.youtube.com/watch?v=SHNmCMk7KMQ'}
+      {id:'wa2', name:'TKE with Band', hint:'Face anchor, soft knee bend, straighten against resistance - VMO activation', time:'15 reps / side', vid:'https://www.youtube.com/results?search_query=TKE+terminal+knee+extension+band+form'},
+      {id:'wa3', name:'Glute Bridge (bodyweight)', hint:'Drive hips up, squeeze hard at top', time:'10 reps', vid:'https://www.youtube.com/results?search_query=bodyweight+glute+bridge+form'},
+      {id:'wa4', name:'Box Squat (bodyweight, 3 sec down)', hint:'Knees track over 2nd toe, stop at 90 degrees', time:'10 reps', vid:'https://www.youtube.com/results?search_query=bodyweight+box+squat+tempo+form'},
+      {id:'wa5', name:'Hip Abductions (band)', hint:'Standing, controlled movement out and back', time:'12 reps / side', vid:'https://www.youtube.com/results?search_query=standing+band+hip+abduction+form'}
     ],
     exercises: [
-      {id:'a1', name:'Leg Press',                     sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Mid-height foot, stop at 90 degrees - total stack weight',    vid:'https://www.youtube.com/watch?v=1bcDXwFEgEU'},
-      {id:'a2', name:'Weighted Glute Bridge',         sets:3, reps:[12,12,10], timed:false, unit:'total', note:'Squeeze hard at top - total barbell weight',                    vid:'https://www.youtube.com/watch?v=wPM8icPu6H8'},
-      {id:'a3', name:'Romanian Deadlift (RDL)',        sets:3, reps:[10,10,8],  timed:false, unit:'each',  note:'Hip hinge, soft knee - log weight of ONE dumbbell',                   vid:'https://www.youtube.com/watch?v=aa57T45iFSE'},
+      {id:'a1', name:'Leg Press',                     sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Mid-height foot, stop at 90 degrees - total stack weight',    vid:'https://www.youtube.com/results?search_query=leg+press+machine+form'},
+      {id:'a2', name:'Weighted Glute Bridge',         sets:3, reps:[12,12,10], timed:false, unit:'total', note:'Squeeze hard at top - total barbell weight',                    vid:'https://www.youtube.com/results?search_query=weighted+barbell+glute+bridge+form'},
+      {id:'a3', name:'Romanian Deadlift (RDL)',        sets:3, reps:[10,10,8],  timed:false, unit:'each',  note:'Hip hinge, soft knee - log weight of ONE dumbbell',                   vid:'https://www.youtube.com/results?search_query=romanian+deadlift+dumbbell+form'},
       {id:'a4', name:'Precor Leg Extension (partial)',sets:3, reps:[15,15,15], timed:false, unit:'total', note:'30-60 degrees range ONLY - total stack weight',               vid:'https://www.youtube.com/results?search_query=partial+range+leg+extension+knee'},
       {id:'a5', name:'Step-Ups (low box)',             sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - drive through heel, log reps completed',                    vid:'https://www.youtube.com/results?search_query=step+up+VMO+quad+form'},
       {id:'a6', name:'Pallof Press',                   sets:3, reps:[12,12,12], timed:false, unit:'total', note:'Anti-rotation, hold 1 sec - total stack weight',             vid:'https://www.youtube.com/results?search_query=Pallof+press+cable+core'},
-      {id:'a7', name:'Incline Reverse Fly',            sets:3, reps:[12,12,12], timed:false, unit:'each',  note:'Thumbs up at peak - log weight of ONE dumbbell',                    vid:'https://www.youtube.com/watch?v=V0FueWLtMTg'},
+      {id:'a7', name:'Incline Reverse Fly',            sets:3, reps:[12,12,12], timed:false, unit:'each',  note:'Thumbs up at peak - log weight of ONE dumbbell',                    vid:'https://www.youtube.com/results?search_query=incline+dumbbell+reverse+fly+form'},
       {id:'a8', name:'Standing Cable Glute Kickback',  sets:3, reps:[12,12,12], timed:false, unit:'total', note:'Isolated glute squeeze, no low back arch - total stack weight',vid:'https://www.youtube.com/results?search_query=standing+cable+glute+kickback+form'},
       {id:'a9', name:'Banded Lateral Walk',            sets:3, reps:[12,12,12], timed:false, unit:'reps',  note:'Bodyweight vs band - log reps, note band color in Notes',vid:'https://www.youtube.com/results?search_query=banded+lateral+walk+monster+walk+glute+medius'}
     ],
     stretches: [
       {id:'as1', name:'Standing Quad Stretch',              hint:'Pull foot to glute, hold for balance',          time:'30-45 sec / side', vid:'https://www.youtube.com/results?search_query=standing+quad+stretch'},
-      {id:'as2', name:'Supine Glute Stretch (deep fig-4)', hint:'Pull thigh closer to chest than regular fig-4', time:'45 sec / side',    vid:'https://www.youtube.com/watch?v=E6sqUHFt6Ng'}
+      {id:'as2', name:'Supine Glute Stretch (deep fig-4)', hint:'Pull thigh closer to chest than regular fig-4', time:'45 sec / side',    vid:'https://www.youtube.com/results?search_query=supine+figure+4+glute+stretch'}
     ],
     cooldown: [
       {id:'ac1', name:'Treadmill Cool-Down', hint:'Slower than warm-up. Flushes knee joint fluid.', time:'10 min', vid:'https://www.youtube.com/results?search_query=treadmill+cool+down+walk'}
@@ -335,28 +362,28 @@ var D = {
     label: 'Day C - Lower Body (Hamstrings + Abs + Lower Back)',
     warmup: [
       {id:'wc1', name:'Treadmill Warm-Up',          hint:'Brisk walk, 1-2% incline only',                          time:'10 min',        vid:'https://www.youtube.com/results?search_query=treadmill+warm+up+walk'},
-      {id:'wc2', name:'TKE with Band',               hint:'Every lower body day - VMO consistency',                 time:'15 reps / side',vid:'https://www.youtube.com/watch?v=SM-gh-ztwZU'},
+      {id:'wc2', name:'TKE with Band',               hint:'Every lower body day - VMO consistency',                 time:'15 reps / side',vid:'https://www.youtube.com/results?search_query=TKE+terminal+knee+extension+band+form'},
       {id:'wc3', name:'Step-Backs',                  hint:'Hip flexor activation',                                  time:'10 reps / side',vid:'https://www.youtube.com/results?search_query=step+back+hip+flexor+activation'},
       {id:'wc4', name:'Cat-Cow (spinal mobility)',   hint:'On all fours, arch and round spine slowly, 4 sec each', time:'10 reps',       vid:'https://www.youtube.com/results?search_query=cat+cow+spine+mobility'}
     ],
     exercises: [
-      {id:'c1',  name:'Box Squat',                       sets:3, reps:[10,10,8],  timed:false, unit:'total', note:'90 degrees max, sit back - total load if weighted, leave blank if bodyweight',              vid:'https://www.youtube.com/watch?v=DC0SyJGTVIE'},
+      {id:'c1',  name:'Box Squat',                       sets:3, reps:[10,10,8],  timed:false, unit:'total', note:'90 degrees max, sit back - total load if weighted, leave blank if bodyweight',              vid:'https://www.youtube.com/results?search_query=box+squat+form'},
       {id:'c5',  name:'Single-Leg Balance',               sets:3, reps:[0,0,0],    timed:true,  note:'25 sec/side, eyes open then closed',   vid:'https://www.youtube.com/results?search_query=single+leg+balance+knee+rehab'},
       {id:'c11', name:'Cable Pull-Through',               sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Hip hinge, squeeze glutes at top, soft knees - total stack weight',vid:'https://www.youtube.com/results?search_query=cable+pull+through+glute+hamstring+form'},
       {id:'c2',  name:'Precor Seated Leg Curl',           sets:3, reps:[12,12,10], timed:false, unit:'total', note:'Knees at pivot, slow return - total stack weight',           vid:'https://www.youtube.com/results?search_query=seated+leg+curl+machine+form'},
       {id:'c3',  name:'Step-Ups (low box)',               sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - drive through heel, log reps completed',                   vid:'https://www.youtube.com/results?search_query=step+up+VMO+quad+form'},
       {id:'c4',  name:'Glute Bridge Hold (weighted)',     sets:3, reps:[0,0,0],    timed:true,  note:'45 sec isometric hold - log any added weight in Notes',                vid:'https://www.youtube.com/results?search_query=glute+bridge+isometric+hold'},
-      {id:'c6',  name:'Dead Bug',                         sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - back flat, opposite arm+leg, log reps completed',          vid:'https://www.youtube.com/watch?v=wr_gd3yjzkk'},
+      {id:'c6',  name:'Dead Bug',                         sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - back flat, opposite arm+leg, log reps completed',          vid:'https://www.youtube.com/results?search_query=dead+bug+exercise+form'},
       {id:'c7',  name:'Bird Dog',                         sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - 10/side, spine neutral, log reps completed',               vid:'https://www.youtube.com/results?search_query=bird+dog+lower+back+core'},
       {id:'c8',  name:'Forearm Plank',                    sets:3, reps:[0,0,0],    timed:true,  note:'30 sec, build to 60 sec',             vid:'https://www.youtube.com/results?search_query=forearm+plank+proper+form'},
       {id:'c9',  name:'Med Ball Rotation (or Landmine)',  sets:3, reps:[12,12,12], timed:false, unit:'total', note:'12/side, controlled - total ball/attachment weight',                 vid:'https://www.youtube.com/results?search_query=medicine+ball+rotation+core'},
       {id:'c10', name:'Back Extension Machine',           sets:3, reps:[12,12,12], timed:false, unit:'total', note:'Squeeze glutes at top, no hyperextension - total added weight if any',vid:'https://www.youtube.com/results?search_query=back+extension+machine+form'}
     ],
     stretches: [
-      {id:'cs1', name:'Supine Hamstring Stretch',hint:'Band or towel around foot, knee slightly soft', time:'30-45 sec / side',vid:'https://www.youtube.com/watch?v=AYD5fikbLcc'},
-      {id:'cs2', name:'Butterfly Stretch',       hint:'Soles together, press knees toward floor',     time:'30-45 sec',       vid:'https://www.youtube.com/watch?v=C6IhNrbZHfA'},
+      {id:'cs1', name:'Supine Hamstring Stretch',hint:'Band or towel around foot, knee slightly soft', time:'30-45 sec / side',vid:'https://www.youtube.com/results?search_query=supine+hamstring+stretch+band'},
+      {id:'cs2', name:'Butterfly Stretch',       hint:'Soles together, press knees toward floor',     time:'30-45 sec',       vid:'https://www.youtube.com/results?search_query=butterfly+stretch+groin'},
       {id:'cs3', name:'Cobra Stretch',           hint:'Face down, press up through hands, hips on floor',time:'20-30 sec',   vid:'https://www.youtube.com/results?search_query=cobra+stretch+form'},
-      {id:'cs4', name:'Childs Pose',             hint:'Kneel, sit back, arms forward, decompress lower back',time:'45 sec',  vid:'https://www.youtube.com/watch?v=oGEvMX1DlM0'}
+      {id:'cs4', name:'Childs Pose',             hint:'Kneel, sit back, arms forward, decompress lower back',time:'45 sec',  vid:'https://www.youtube.com/results?search_query=childs+pose+stretch'}
     ],
     cooldown: [
       {id:'cc1', name:'Treadmill Cool-Down', hint:'Flush knee joint fluid. Especially important on leg days.', time:'10 min', vid:'https://www.youtube.com/results?search_query=treadmill+cool+down+walk'}
@@ -370,8 +397,8 @@ var D = {
       {id:'wd3', name:'Shoulder Rolls + Arm Circles',hint:'Both directions, gradual range increase',  time:'10 each direction',vid:'https://www.youtube.com/results?search_query=shoulder+mobility+warm+up'}
     ],
     exercises: [
-      {id:'d1', name:'Lat Pulldown',                  sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Pull to upper chest, squeeze lats - total stack weight',      vid:'https://www.youtube.com/watch?v=lSt1oTrZ_Cc'},
-      {id:'d2', name:'Seated Cable Row',               sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Drive elbows past torso - total stack weight',               vid:'https://www.youtube.com/watch?v=7BkgqzC6WsM'},
+      {id:'d1', name:'Lat Pulldown',                  sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Pull to upper chest, squeeze lats - total stack weight',      vid:'https://www.youtube.com/results?search_query=lat+pulldown+form'},
+      {id:'d2', name:'Seated Cable Row',               sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Drive elbows past torso - total stack weight',               vid:'https://www.youtube.com/results?search_query=seated+cable+row+form'},
       {id:'d3', name:'FreeMotion Fly/Rear Delt',       sets:3, reps:[12,12,12], timed:false, unit:'each',  note:'REAR DELT setting, face stack, palms down - log weight per side',vid:'https://www.youtube.com/results?search_query=FreeMotion+rear+delt+fly+form'},
       {id:'d6', name:'Farmer Carry',                   sets:3, reps:[0,0,0],    timed:true,  note:'30 sec per set, log weight per hand in Notes',  vid:'https://www.youtube.com/results?search_query=farmer+carry+form'},
       {id:'d4', name:'Bicep Curl (alternating)',       sets:3, reps:[12,12,12], timed:false, unit:'each',  note:'Slow eccentric, no swinging - log weight of ONE dumbbell',           vid:'https://www.youtube.com/results?search_query=alternating+dumbbell+bicep+curl'},
@@ -382,7 +409,7 @@ var D = {
     stretches: [
       {id:'ds1', name:'Lat Overhead Stretch', hint:'Hold rack, hinge at hips, stretch sideways',      time:'30 sec / side',vid:'https://www.youtube.com/results?search_query=lat+stretch+overhead+rack'},
       {id:'ds2', name:'Biceps Chest Opener',  hint:'Arms behind back, interlace fingers, open chest', time:'30 sec',       vid:'https://www.youtube.com/results?search_query=bicep+chest+opener+stretch'},
-      {id:'ds3', name:'Childs Pose',          hint:'Kneel, sit back, arms forward',                   time:'45-60 sec',    vid:'https://www.youtube.com/watch?v=oGEvMX1DlM0'}
+      {id:'ds3', name:'Childs Pose',          hint:'Kneel, sit back, arms forward',                   time:'45-60 sec',    vid:'https://www.youtube.com/results?search_query=childs+pose+stretch'}
     ],
     cooldown: [
       {id:'dc1', name:'Treadmill Cool-Down', hint:'Slower than warm-up pace. Gradual recovery.', time:'10 min', vid:'https://www.youtube.com/results?search_query=treadmill+cool+down+walk'}
@@ -391,9 +418,9 @@ var D = {
 };
 
 var CS = [
-  {id:'sc1', name:'Kneeling Hip Flexor Stretch', target:'Hip Flexors',      desc:'Half-kneeling, tuck pelvis, shift hips forward. Feel pull in front of back hip.', time:'30-45 sec / side', vid:'https://www.youtube.com/watch?v=Cbyn2RVrj9s'},
-  {id:'sc2', name:'Standing Calf / Achilles',    target:'Calves',           desc:'Heel flat on floor. Straight leg = upper calf. Bent knee = Achilles.',           time:'30-45 sec / side', vid:'https://www.youtube.com/watch?v=f1HzSAuB-Vw'},
-  {id:'sc3', name:'Figure-4 Piriformis Stretch', target:'IT Band / Hip',    desc:'Lying on back, ankle over opposite knee, pull thigh toward chest.',              time:'30-45 sec / side', vid:'https://www.youtube.com/watch?v=-g0nuyTHMrI'},
+  {id:'sc1', name:'Kneeling Hip Flexor Stretch', target:'Hip Flexors',      desc:'Half-kneeling, tuck pelvis, shift hips forward. Feel pull in front of back hip.', time:'30-45 sec / side', vid:'https://www.youtube.com/results?search_query=kneeling+hip+flexor+stretch'},
+  {id:'sc2', name:'Standing Calf / Achilles',    target:'Calves',           desc:'Heel flat on floor. Straight leg = upper calf. Bent knee = Achilles.',           time:'30-45 sec / side', vid:'https://www.youtube.com/results?search_query=standing+calf+achilles+stretch'},
+  {id:'sc3', name:'Figure-4 Piriformis Stretch', target:'IT Band / Hip',    desc:'Lying on back, ankle over opposite knee, pull thigh toward chest.',              time:'30-45 sec / side', vid:'https://www.youtube.com/results?search_query=figure+4+piriformis+stretch'},
   {id:'sc4', name:'Doorway Chest Stretch',       target:'Chest / Shoulder', desc:'Arms at 90 degrees in doorframe, lean gently through.',                         time:'30 sec',           vid:'https://www.youtube.com/results?search_query=doorway+chest+stretch'},
   {id:'sc5', name:'Lateral Neck Stretch',        target:'Neck / Upper Trap',desc:'Drop ear toward shoulder. Gentle hand pressure. Switch sides.',                 time:'30 sec / side',    vid:'https://www.youtube.com/results?search_query=lateral+neck+stretch'}
 ];
@@ -468,7 +495,7 @@ function makeCB(item, isStretch) {
   if (item.vid) {
     var vb = document.createElement('button');
     vb.className = 'vidbtn';
-    vb.textContent = '&#9654; Watch video';
+    vb.innerHTML = '&#9654; Watch video';
     vb.setAttribute('data-vid', item.vid);
     div.querySelector('.cb-lbl').appendChild(vb);
     vb.addEventListener('click', function(e) {
@@ -506,7 +533,7 @@ function makeExBlock(ex) {
   if (ex.timed) {
     var tb = document.createElement('span');
     tb.className = 'ex-timed';
-    tb.textContent = '&#9201; ' + ex.sets + ' sets - log seconds';
+    tb.innerHTML = '&#9201; ' + ex.sets + ' sets - log seconds';
     meta.appendChild(tb);
   } else {
     var uniq = [];
@@ -521,7 +548,7 @@ function makeExBlock(ex) {
   if (ex.vid) {
     var vb = document.createElement('button');
     vb.className = 'vidbtn';
-    vb.textContent = '&#9654; Watch video';
+    vb.innerHTML = '&#9654; Watch video';
     vb.setAttribute('data-vid', ex.vid);
     vb.addEventListener('click', function() { openVid(this.getAttribute('data-vid')); });
     meta.appendChild(vb);
@@ -542,7 +569,20 @@ function makeExBlock(ex) {
     } else if (unit === 'reps') {
       lbl.textContent = 'Set ' + (i+1) + ' (reps)';
     } else {
-      lbl.textContent = ex.reps[i] > 0 ? 'Set ' + (i+1) + ' - ' + ex.reps[i] + ' reps' : 'Set ' + (i+1);
+      lbl.textContent = 'Set ' + (i+1);
+    }
+    si.appendChild(lbl);
+    var editableReps = !ex.timed && unit !== 'reps';
+    if (editableReps) {
+      var repInp = document.createElement('input');
+      repInp.type = 'number';
+      repInp.className = 'rep-mini';
+      repInp.id = ex.id + '_s' + (i+1) + '_reps';
+      repInp.placeholder = ex.reps[i] > 0 ? ex.reps[i] + ' reps' : 'reps';
+      repInp.min = '0';
+      repInp.step = '1';
+      repInp.setAttribute('inputmode', 'numeric');
+      si.appendChild(repInp);
     }
     var inp = document.createElement('input');
     inp.type = 'number';
@@ -554,7 +594,6 @@ function makeExBlock(ex) {
     inp.min = '0';
     inp.step = ex.timed ? '5' : (unit === 'reps' ? '1' : '2.5');
     inp.setAttribute('inputmode', 'decimal');
-    si.appendChild(lbl);
     si.appendChild(inp);
     sg.appendChild(si);
   }
@@ -629,22 +668,33 @@ function saveWorkout() {
   var hasData = false;
   day.exercises.forEach(function(ex) {
     var sets = [];
+    var repsLogged = [];
+    var unit = ex.unit || 'total';
+    var editableReps = !ex.timed && unit !== 'reps';
     for (var i = 1; i <= ex.sets; i++) {
       var inp = el(ex.id + '_s' + i);
       var v = inp ? inp.value.trim() : '';
       sets.push(v !== '' ? parseFloat(v) : null);
       if (v !== '') hasData = true;
+      if (editableReps) {
+        var rinp = el(ex.id + '_s' + i + '_reps');
+        var rv = rinp ? rinp.value.trim() : '';
+        repsLogged.push(rv !== '' ? parseFloat(rv) : null);
+        if (rv !== '') hasData = true;
+      }
     }
     var noteInp = el(ex.id + '_note');
     var noteVal = noteInp ? noteInp.value : '';
     if (ex.timed && noteVal.trim() !== '') hasData = true;
-    entries.push({id:ex.id, name:ex.name, reps:ex.reps, sets:sets, note:noteVal, timed:ex.timed, unit:ex.unit || 'total'});
+    entries.push({id:ex.id, name:ex.name, reps:ex.reps, repsLogged:editableReps ? repsLogged : null, sets:sets, note:noteVal, timed:ex.timed, unit:unit});
   });
   if (!hasData) { showToast('Enter at least one value'); return; }
   workouts = workouts.filter(function(w) { return !(w.date === date && w.day === curDay); });
   workouts.push({date:date, day:curDay, dayLabel:day.label, entries:entries, savedAt:new Date().toISOString()});
   workouts.sort(function(a,b) { return new Date(b.date) - new Date(a.date); });
   saveData();
+  updateLastWorkoutBanner();
+  ghBackup(true);
   var verify = lsGet(WK);
   if (verify && JSON.parse(verify).length > 0) {
     showBanner('Workout saved - ' + fmtDate(date) + ' - Check History tab');
@@ -655,6 +705,8 @@ function saveWorkout() {
     for (var i = 1; i <= ex.sets; i++) {
       var inp = el(ex.id + '_s' + i);
       if (inp) inp.value = '';
+      var rinp = el(ex.id + '_s' + i + '_reps');
+      if (rinp) rinp.value = '';
     }
     var noteInp = el(ex.id + '_note');
     if (noteInp) noteInp.value = '';
@@ -690,7 +742,7 @@ function makeStrTab(s) {
   if (s.vid) {
     var vb = document.createElement('button');
     vb.className = 'vidbtn';
-    vb.textContent = '&#9654; Watch video';
+    vb.innerHTML = '&#9654; Watch video';
     vb.setAttribute('data-vid', s.vid);
     div.querySelector('.cb-lbl').appendChild(vb);
     vb.addEventListener('click', function(e) {
@@ -758,14 +810,16 @@ function renderHistory() {
     rows.className = 'hrows';
     var hasRows = false;
     w.entries.forEach(function(e) {
-      var hasVals = e.sets.some(function(s) { return s !== null; }) || e.note;
+      var hasVals = e.sets.some(function(s) { return s !== null; }) || (e.repsLogged && e.repsLogged.some(function(s) { return s !== null; })) || e.note;
       if (!hasVals) return;
       hasRows = true;
       var eu = e.unit || 'total';
       var unit = e.timed ? 'sec' : (eu === 'reps' ? 'reps' : (eu === 'each' ? 'lb ea' : 'lb'));
       var sStr = e.sets.map(function(v, i) {
         if (v === null) return '';
-        var rep = (!e.timed && eu !== 'reps' && e.reps && e.reps[i] > 0) ? 'x' + e.reps[i] : '';
+        var loggedRep = e.repsLogged && e.repsLogged[i] !== null && e.repsLogged[i] !== undefined ? e.repsLogged[i] : null;
+        var targetRep = (!e.timed && eu !== 'reps' && e.reps && e.reps[i] > 0) ? e.reps[i] : null;
+        var rep = loggedRep !== null ? 'x' + loggedRep : (targetRep !== null ? 'x' + targetRep : '');
         return 'S' + (i+1) + ':' + v + unit + rep;
       }).filter(Boolean).join('   ');
       var row = document.createElement('div');
@@ -828,6 +882,8 @@ function delW(idx) {
   if (!confirm('Delete this workout?')) return;
   workouts.splice(idx, 1);
   saveData();
+  updateLastWorkoutBanner();
+  ghBackup(true);
   renderHistory();
   renderStats();
   showToast('Deleted');
@@ -851,6 +907,7 @@ function openEdit(idx) {
     var msg = document.createElement('div');
     msg.className = gc;
     var eu = e.unit || 'total';
+    var editableReps = !e.timed && eu !== 'reps';
     e.sets.forEach(function(v, i) {
       var si = document.createElement('div');
       var lbl = document.createElement('label');
@@ -859,7 +916,21 @@ function openEdit(idx) {
       } else if (eu === 'reps') {
         lbl.textContent = 'Set ' + (i+1) + ' (reps)';
       } else {
-        lbl.textContent = 'Set ' + (i+1) + (e.reps && e.reps[i] > 0 ? ' - ' + e.reps[i] + 'r' : '');
+        lbl.textContent = 'Set ' + (i+1);
+      }
+      si.appendChild(lbl);
+      if (editableReps) {
+        var rv = e.repsLogged && e.repsLogged[i] !== null && e.repsLogged[i] !== undefined ? e.repsLogged[i] : '';
+        var repInp = document.createElement('input');
+        repInp.type = 'number';
+        repInp.className = 'rep-mini';
+        repInp.id = 'edit_' + e.id + '_s' + (i+1) + '_reps';
+        repInp.value = rv;
+        repInp.placeholder = e.reps && e.reps[i] > 0 ? e.reps[i] + ' reps' : 'reps';
+        repInp.min = '0';
+        repInp.step = '1';
+        repInp.setAttribute('inputmode', 'numeric');
+        si.appendChild(repInp);
       }
       var inp = document.createElement('input');
       inp.type = 'number';
@@ -872,7 +943,6 @@ function openEdit(idx) {
       inp.min = '0';
       inp.step = e.timed ? '5' : (eu === 'reps' ? '1' : '2.5');
       inp.setAttribute('inputmode', 'decimal');
-      si.appendChild(lbl);
       si.appendChild(inp);
       msg.appendChild(si);
     });
@@ -899,11 +969,20 @@ function saveEdit() {
   if (editIdx < 0) return;
   var w = workouts[editIdx];
   w.entries.forEach(function(e) {
+    var eu = e.unit || 'total';
+    var editableReps = !e.timed && eu !== 'reps';
     e.sets = e.sets.map(function(_, i) {
       var inp = el('edit_' + e.id + '_s' + (i+1));
       var v = inp ? inp.value.trim() : '';
       return v !== '' ? parseFloat(v) : null;
     });
+    if (editableReps) {
+      e.repsLogged = e.sets.map(function(_, i) {
+        var rinp = el('edit_' + e.id + '_s' + (i+1) + '_reps');
+        var rv = rinp ? rinp.value.trim() : '';
+        return rv !== '' ? parseFloat(rv) : null;
+      });
+    }
     var ni = el('edit_' + e.id + '_note');
     if (ni) e.note = ni.value;
   });
@@ -937,14 +1016,23 @@ function buildText() {
     w.entries.forEach(function(e) {
       if (!byEx[e.name]) byEx[e.name] = [];
       var wts = e.sets.filter(function(s) { return s !== null; });
-      if (wts.length) byEx[e.name].push({date:w.date, day:w.day, wts:wts, timed:e.timed, unit:e.unit || 'total', note:e.note});
+      if (wts.length) byEx[e.name].push({date:w.date, day:w.day, wts:wts, repsLogged:e.repsLogged, targetReps:e.reps, timed:e.timed, unit:e.unit || 'total', note:e.note});
     });
   });
   Object.keys(byEx).forEach(function(name) {
     out += name + ':' + nl;
     byEx[name].sort(function(a,b) { return new Date(a.date)-new Date(b.date); }).forEach(function(s) {
       var u = s.timed ? 'sec' : (s.unit === 'reps' ? 'reps' : (s.unit === 'each' ? 'lbs ea' : 'lbs'));
-      out += '  ' + s.date + ' (Day ' + s.day + '): ' + s.wts.join('/') + u + (s.note ? ' | ' + s.note : '') + nl;
+      var repsStr = '';
+      if (!s.timed && s.unit !== 'reps') {
+        var rr = s.wts.map(function(_, i) {
+          if (s.repsLogged && s.repsLogged[i] !== null && s.repsLogged[i] !== undefined) return s.repsLogged[i];
+          if (s.targetReps && s.targetReps[i] > 0) return s.targetReps[i];
+          return '?';
+        });
+        repsStr = ' @ ' + rr.join('/') + 'reps';
+      }
+      out += '  ' + s.date + ' (Day ' + s.day + '): ' + s.wts.join('/') + u + repsStr + (s.note ? ' | ' + s.note : '') + nl;
     });
     out += nl;
   });
@@ -967,14 +1055,19 @@ function expJSON() {
 
 function expCSV() {
   var nl = '\n';
-  var csv = 'Date,Day,Exercise,Set1,Set2,Set3,Unit,Notes' + nl;
+  var csv = 'Date,Day,Exercise,Set1,Set2,Set3,Unit,Reps1,Reps2,Reps3,Notes' + nl;
   workouts.forEach(function(w) {
     w.entries.forEach(function(e) {
       var eu = e.unit || 'total';
       var unit = e.timed ? 'sec' : (eu === 'reps' ? 'reps' : (eu === 'each' ? 'lbs-ea' : 'lbs'));
+      var repsCols = [0,1,2].map(function(i) {
+        if (e.repsLogged && e.repsLogged[i] !== null && e.repsLogged[i] !== undefined) return e.repsLogged[i];
+        if (eu !== 'reps' && !e.timed && e.reps && e.reps[i] > 0) return e.reps[i];
+        return '';
+      }).join(',');
       csv += w.date + ',Day ' + w.day + ',"' + e.name + '",' +
         e.sets.map(function(s) { return s !== null ? s : ''; }).join(',') + ',' +
-        unit + ',"' + (e.note || '').replace(/,/g, ';') + '"' + nl;
+        unit + ',' + repsCols + ',"' + (e.note || '').replace(/,/g, ';') + '"' + nl;
     });
   });
   var a = document.createElement('a');
@@ -997,11 +1090,129 @@ function impJSON() {
     });
     workouts.sort(function(a,b) { return new Date(b.date) - new Date(a.date); });
     saveData();
+    updateLastWorkoutBanner();
+    ghBackup(true);
     renderHistory();
     renderStats();
     el('imp-area').value = '';
     showToast('Imported ' + added + ' workout' + (added !== 1 ? 's' : ''));
   } catch(e) { showToast('Invalid JSON - check format'); }
+}
+
+// -- GITHUB AUTO-BACKUP ------------------------------------------------------
+var GH_KEY = 'wt8_gh_settings';
+var GH_STATUS_KEY = 'wt8_gh_last_backup';
+var GH_BACKUP_PATH = 'backup/workout-data.json';
+
+function loadGHSettings() {
+  var s = lsGet(GH_KEY);
+  return s ? JSON.parse(s) : {owner:'', repo:'', token:''};
+}
+function saveGHSettings(s) { lsSet(GH_KEY, JSON.stringify(s)); }
+
+function guessOwnerRepoFromURL() {
+  try {
+    var host = window.location.hostname; // e.g. username.github.io
+    var owner = host.endsWith('.github.io') ? host.split('.')[0] : '';
+    var pathParts = window.location.pathname.split('/').filter(Boolean);
+    var repo = pathParts.length ? pathParts[0] : '';
+    return {owner: owner, repo: repo};
+  } catch(e) { return {owner:'', repo:''}; }
+}
+
+function b64EncodeUnicode(str) {
+  return btoa(encodeURIComponent(str).replace(/%([0-9A-F]{2})/g, function(match, p1) {
+    return String.fromCharCode('0x' + p1);
+  }));
+}
+
+function initGHUI() {
+  var s = loadGHSettings();
+  if (!s.owner && !s.repo) {
+    var guess = guessOwnerRepoFromURL();
+    s.owner = guess.owner;
+    s.repo = guess.repo;
+  }
+  el('gh-owner').value = s.owner || '';
+  el('gh-repo').value = s.repo || '';
+  el('gh-token').value = s.token || '';
+  updateGHStatusUI();
+}
+
+function updateGHStatusUI() {
+  var s = loadGHSettings();
+  var statusEl = el('gh-status');
+  if (!statusEl) return;
+  if (!s.token || !s.owner || !s.repo) {
+    statusEl.textContent = 'Not configured - fill in the fields above and tap Save Settings';
+    statusEl.style.color = '#5C6478';
+    return;
+  }
+  var last = lsGet(GH_STATUS_KEY);
+  if (last) {
+    var parsed = JSON.parse(last);
+    if (parsed.ok) {
+      statusEl.textContent = 'Last backup: ' + new Date(parsed.at).toLocaleString();
+      statusEl.style.color = '#4ECDC4';
+    } else {
+      statusEl.textContent = 'Last attempt failed: ' + parsed.error;
+      statusEl.style.color = '#E8856A';
+    }
+  } else {
+    statusEl.textContent = 'Configured - not backed up yet, tap Backup Now';
+    statusEl.style.color = '#9BA3B8';
+  }
+}
+
+function ghSaveSettingsClick() {
+  var s = {
+    owner: el('gh-owner').value.trim(),
+    repo: el('gh-repo').value.trim(),
+    token: el('gh-token').value.trim()
+  };
+  if (!s.owner || !s.repo || !s.token) { showToast('Fill in all three fields'); return; }
+  saveGHSettings(s);
+  updateGHStatusUI();
+  showToast('Settings saved');
+}
+
+function ghBackup(silent) {
+  var s = loadGHSettings();
+  if (!s.owner || !s.repo || !s.token) {
+    if (!silent) showToast('Set up GitHub backup first');
+    return Promise.resolve(false);
+  }
+  var apiBase = 'https://api.github.com/repos/' + s.owner + '/' + s.repo + '/contents/' + GH_BACKUP_PATH;
+  var payload = {
+    exportedAt: new Date().toISOString(),
+    workouts: workouts,
+    renpho: loadRenpho()
+  };
+  var content = b64EncodeUnicode(JSON.stringify(payload, null, 2));
+  var headers = {
+    'Authorization': 'token ' + s.token,
+    'Accept': 'application/vnd.github+json'
+  };
+  return fetch(apiBase, {headers: headers}).then(function(res) {
+    if (res.status === 200) return res.json().then(function(d) { return d.sha; });
+    if (res.status === 404) return null;
+    throw new Error('GET failed (' + res.status + ')');
+  }).then(function(sha) {
+    var body = {message: 'Auto-backup - ' + new Date().toLocaleString(), content: content};
+    if (sha) body.sha = sha;
+    return fetch(apiBase, {method:'PUT', headers: headers, body: JSON.stringify(body)});
+  }).then(function(res) {
+    if (!res.ok) return res.json().then(function(d) { throw new Error(d.message || ('PUT failed (' + res.status + ')')); });
+    lsSet(GH_STATUS_KEY, JSON.stringify({ok:true, at:new Date().toISOString()}));
+    updateGHStatusUI();
+    if (!silent) showToast('Backed up to GitHub');
+    return true;
+  }).catch(function(err) {
+    lsSet(GH_STATUS_KEY, JSON.stringify({ok:false, error: err.message}));
+    updateGHStatusUI();
+    if (!silent) showToast('Backup failed - check token/settings');
+    return false;
+  });
 }
 
 // -- NAV -------------------------------------------------------------------
@@ -1013,7 +1224,7 @@ function showTab(tabId) {
   el('tab-' + tabId).classList.add('on');
   el('t-' + tabId).classList.add('on');
   if (tabId === 'history') renderHistory();
-  if (tabId === 'export') renderStats();
+  if (tabId === 'export') { renderStats(); initGHUI(); }
   if (tabId === 'renpho') { el('rdate').value = new Date().toISOString().split('T')[0]; renderRenphoHistory(); }
   if (tabId === 'stretch') renderStretch();
 }
@@ -1026,6 +1237,20 @@ function openVid(url) {
 
 function fmtDate(ds) {
   return new Date(ds + 'T12:00:00').toLocaleDateString('en-US', {weekday:'short', month:'short', day:'numeric', year:'numeric'});
+}
+
+function fmtDateShort(ds) {
+  return new Date(ds + 'T12:00:00').toLocaleDateString('en-US', {month:'short', day:'numeric'});
+}
+
+function updateLastWorkoutBanner() {
+  var lw = el('last-workout');
+  if (!lw) return;
+  if (!workouts.length) { lw.innerHTML = 'No workouts logged yet - tap Save after your first one'; return; }
+  var last = workouts[0];
+  var days = Math.round((new Date().setHours(0,0,0,0) - new Date(last.date + 'T00:00:00').setHours(0,0,0,0)) / 86400000);
+  var when = days === 0 ? 'Today' : days === 1 ? 'Yesterday' : days + ' days ago';
+  lw.innerHTML = 'Last: <span>Day ' + last.day + '</span> - ' + fmtDateShort(last.date) + ' (' + when + ')';
 }
 
 function showToast(msg) {
@@ -1043,6 +1268,9 @@ function showBanner(msg) {
 }
 
 // -- EVENT LISTENERS -------------------------------------------------------
+el('home-title').addEventListener('click', function() { showTab('log'); });
+el('home-title').addEventListener('keydown', function(e) { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); showTab('log'); } });
+el('last-workout').addEventListener('click', function() { showTab('history'); });
 el('t-log').addEventListener('click', function() { showTab('log'); });
 el('t-stretch').addEventListener('click', function() { showTab('stretch'); });
 el('t-history').addEventListener('click', function() { showTab('history'); });
@@ -1103,6 +1331,8 @@ el('exp-text-btn').addEventListener('click', expText);
 el('exp-json-btn').addEventListener('click', expJSON);
 el('exp-csv-btn').addEventListener('click', expCSV);
 el('imp-btn').addEventListener('click', impJSON);
+el('gh-save-btn').addEventListener('click', ghSaveSettingsClick);
+el('gh-backup-btn').addEventListener('click', function() { ghBackup(false); });
 
 // RENPHO listeners
 el('t-renpho').addEventListener('click', function() { showTab('renpho'); });
@@ -1136,6 +1366,7 @@ function saveBodyMetrics() {
   entries.push(entry);
   entries.sort(function(a,b) { return new Date(b.date) - new Date(a.date); });
   saveRenpho(entries);
+  ghBackup(true);
   ['weight','fat','muscle','visceral','bmr','bmi'].forEach(function(f) {
     var inp = el('r-' + f); if (inp) inp.value = '';
   });
@@ -1250,6 +1481,7 @@ el('wdate').value = new Date().toISOString().split('T')[0];
   el('rdate').value = new Date().toISOString().split('T')[0];
 loadData();
 renderLog();
+updateLastWorkoutBanner();
 
 
 })();
