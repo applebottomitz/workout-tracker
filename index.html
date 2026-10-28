@@ -188,8 +188,8 @@ header p{font-size:13px;color:#5C6478;margin-top:3px;}
     <div class="sp-wrap"><div class="sp-fill" id="sp-fill" style="width:0%"></div></div>
     <div class="sp-lbl" id="sp-lbl">of 0 done</div>
   </div>
-  <p style="font-size:12px;color:#5C6478;margin-bottom:13px;">Tap each stretch to check off. Resets each session.</p>
-  <div class="ss ss-c">* Core 5 - Every Session</div>
+  <p style="font-size:12px;color:#5C6478;margin-bottom:13px;">Optional. Research shows no soreness benefit from stretching, so use these when something feels tight. Tap to check off.</p>
+  <div class="ss ss-c">General (optional)</div>
   <div id="s-core"></div>
   <div class="ss ss-d" id="s-day-lbl">Day A Additions</div>
   <div id="s-day"></div>
@@ -311,26 +311,29 @@ var D = {
       {id:'wa1', name:'Treadmill Warm-Up', hint:'Brisk walk, 1-2% incline only', time:'10 min', vid:'https://www.youtube.com/results?search_query=treadmill+warm+up+walk'},
       {id:'wa2', name:'TKE with Band', hint:'Face anchor, soft knee bend, straighten against resistance - VMO activation', time:'15 reps / side', vid:'https://www.youtube.com/results?search_query=TKE+terminal+knee+extension+band+form'},
       {id:'wa3', name:'Glute Bridge (bodyweight)', hint:'Drive hips up, squeeze hard at top', time:'10 reps', vid:'https://www.youtube.com/results?search_query=bodyweight+glute+bridge+form'},
-      {id:'wa4', name:'Box Squat (bodyweight, 3 sec down)', hint:'Knees track over 2nd toe, stop at 90 degrees', time:'10 reps', vid:'https://www.youtube.com/results?search_query=bodyweight+box+squat+tempo+form'},
+      {id:'wa4', name:'Box Squat (bodyweight, 3 sec down)', hint:'Knees track over 2nd toe, high box, stop at about 60 degrees', time:'10 reps', vid:'https://www.youtube.com/results?search_query=bodyweight+box+squat+tempo+form'},
       {id:'wa5', name:'Hip Abductions (band)', hint:'Standing, controlled movement out and back', time:'12 reps / side', vid:'https://www.youtube.com/results?search_query=standing+band+hip+abduction+form'}
     ],
     exercises: [
-      {id:'a1', name:'Leg Press',                     sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Mid-height foot, stop at 90 degrees - total stack weight',    vid:'https://www.youtube.com/results?search_query=leg+press+machine+form'},
-      {id:'a2', name:'Weighted Glute Bridge',         sets:3, reps:[12,12,10], timed:false, unit:'total', note:'Squeeze hard at top - total barbell weight',                    vid:'https://www.youtube.com/results?search_query=weighted+barbell+glute+bridge+form'},
+      {id:'a1', name:'Leg Press',                     sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Mid-height foot, stop at 60 degrees knee bend (shallower than a full squat) - total stack weight',    vid:'https://www.youtube.com/results?search_query=leg+press+machine+form'},
+      {id:'a2t', name:'Hip Thrust (bench)',            sets:3, reps:[12,10,8],  timed:false, unit:'total', note:'Upper back on bench, feet so shins are vertical at the top (never closer in), squeeze glutes, chin tucked. Start light. Log total bar/machine weight, or one dumbbell if single-leg',vid:'https://www.youtube.com/results?search_query=hip+thrust+bench+form'},
       {id:'a3', name:'Romanian Deadlift (RDL)',        sets:3, reps:[10,10,8],  timed:false, unit:'each',  note:'Hip hinge, soft knee - log weight of ONE dumbbell',                   vid:'https://www.youtube.com/results?search_query=romanian+deadlift+dumbbell+form'},
-      {id:'a4', name:'Precor Leg Extension (partial)',sets:3, reps:[15,15,15], timed:false, unit:'total', note:'30-60 degrees range ONLY - total stack weight',               vid:'https://www.youtube.com/results?search_query=partial+range+leg+extension+knee'},
-      {id:'a5', name:'Step-Ups (low box)',             sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - drive through heel, log reps completed',                    vid:'https://www.youtube.com/results?search_query=step+up+VMO+quad+form'},
+      {id:'a4', name:'Precor Leg Extension (partial)',sets:3, reps:[15,15,15], timed:false, unit:'total', note:'Start with knee bent 90, lift only until 45 degrees (do not straighten fully), light weight - total stack weight',               vid:'https://www.youtube.com/results?search_query=partial+range+leg+extension+knee'},
+      {id:'a5', name:'Step-Ups (low box)',             sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - max 6in box. Lean forward from the hips, shin near vertical, drive through heel. Log reps completed',                    vid:'https://www.youtube.com/results?search_query=step+up+VMO+quad+form'},
       {id:'a6', name:'Pallof Press',                   sets:3, reps:[12,12,12], timed:false, unit:'total', note:'Anti-rotation, hold 1 sec - total stack weight',             vid:'https://www.youtube.com/results?search_query=Pallof+press+cable+core'},
       {id:'a7', name:'Incline Reverse Fly',            sets:3, reps:[12,12,12], timed:false, unit:'each',  note:'Thumbs up at peak - log weight of ONE dumbbell',                    vid:'https://www.youtube.com/results?search_query=incline+dumbbell+reverse+fly+form'},
       {id:'a8', name:'Standing Cable Glute Kickback',  sets:3, reps:[12,12,12], timed:false, unit:'total', note:'Isolated glute squeeze, no low back arch - total stack weight',vid:'https://www.youtube.com/results?search_query=standing+cable+glute+kickback+form'},
       {id:'a9', name:'Banded Lateral Walk',            sets:3, reps:[12,12,12], timed:false, unit:'reps',  note:'Bodyweight vs band - log reps, note band color in Notes',vid:'https://www.youtube.com/results?search_query=banded+lateral+walk+monster+walk+glute+medius'}
     ],
     stretches: [
+      {id:'as3', name:'Standing IT Band Stretch',          target:'Per ortho referral', hint:'Cross one leg behind, lean away from the hip. Gentle range only, stop before it feels maximal.', time:'30 sec / side', vid:'https://www.youtube.com/results?search_query=standing+IT+band+stretch'}
+    ],
+    optional: [
       {id:'as1', name:'Standing Quad Stretch',              hint:'Pull foot to glute, hold for balance',          time:'30-45 sec / side', vid:'https://www.youtube.com/results?search_query=standing+quad+stretch'},
       {id:'as2', name:'Supine Glute Stretch (deep fig-4)', hint:'Pull thigh closer to chest than regular fig-4', time:'45 sec / side',    vid:'https://www.youtube.com/results?search_query=supine+figure+4+glute+stretch'}
     ],
     cooldown: [
-      {id:'ac1', name:'Treadmill Cool-Down', hint:'Slower than warm-up. Flushes knee joint fluid.', time:'10 min', vid:'https://www.youtube.com/results?search_query=treadmill+cool+down+walk'}
+      {id:'ac1', name:'Treadmill Cool-Down', hint:'Slower than warm-up. Easy walk.', time:'10 min', vid:'https://www.youtube.com/results?search_query=treadmill+cool+down+walk'}
     ]
   },
   B: {
@@ -348,7 +351,8 @@ var D = {
       {id:'b5', name:'Triceps OH Extension',                 sets:3, reps:[12,12,12], timed:false, unit:'total', note:'Elbows forward, long head - one dumbbell held with both hands',                 vid:'https://www.youtube.com/results?search_query=overhead+tricep+extension+form'},
       {id:'b6', name:'Close-Grip Dumbbell Press',            sets:3, reps:[10,10,10], timed:false, unit:'each',  note:'Palms facing, elbows tucked close - log weight of ONE dumbbell',         vid:'https://www.youtube.com/results?search_query=close+grip+dumbbell+press+triceps'}
     ],
-    stretches: [
+    stretches: [],
+    optional: [
       {id:'bs1', name:'Overhead Triceps Stretch',   hint:'One arm overhead, bend elbow, press gently with other hand', time:'30 sec / side', vid:'https://www.youtube.com/results?search_query=overhead+tricep+stretch'},
       {id:'bs2', name:'Doorway Chest Stretch',      hint:'Arms at 90 degrees in doorframe, lean gently through',      time:'30 sec',        vid:'https://www.youtube.com/results?search_query=doorway+chest+stretch'},
       {id:'bs3', name:'Cross-Body Shoulder Stretch',hint:'Pull one arm across chest with opposite hand at elbow',      time:'30 sec / side', vid:'https://www.youtube.com/results?search_query=cross+body+shoulder+stretch'},
@@ -367,26 +371,28 @@ var D = {
       {id:'wc4', name:'Cat-Cow (spinal mobility)',   hint:'On all fours, arch and round spine slowly, 4 sec each', time:'10 reps',       vid:'https://www.youtube.com/results?search_query=cat+cow+spine+mobility'}
     ],
     exercises: [
-      {id:'c1',  name:'Box Squat',                       sets:3, reps:[10,10,8],  timed:false, unit:'total', note:'90 degrees max, sit back - total load if weighted, leave blank if bodyweight',              vid:'https://www.youtube.com/results?search_query=box+squat+form'},
+      {id:'c1',  name:'Box Squat',                       sets:3, reps:[10,10,8],  timed:false, unit:'total', note:'High box, stop at about 60 degrees knee bend, sit back - total load if weighted, leave blank if bodyweight',              vid:'https://www.youtube.com/results?search_query=box+squat+form'},
       {id:'c5',  name:'Single-Leg Balance',               sets:3, reps:[0,0,0],    timed:true,  note:'25 sec/side, eyes open then closed',   vid:'https://www.youtube.com/results?search_query=single+leg+balance+knee+rehab'},
       {id:'c11', name:'Cable Pull-Through',               sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Hip hinge, squeeze glutes at top, soft knees - total stack weight',vid:'https://www.youtube.com/results?search_query=cable+pull+through+glute+hamstring+form'},
-      {id:'c2',  name:'Precor Seated Leg Curl',           sets:3, reps:[12,12,10], timed:false, unit:'total', note:'Knees at pivot, slow return - total stack weight',           vid:'https://www.youtube.com/results?search_query=seated+leg+curl+machine+form'},
-      {id:'c3',  name:'Step-Ups (low box)',               sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - drive through heel, log reps completed',                   vid:'https://www.youtube.com/results?search_query=step+up+VMO+quad+form'},
+      {id:'c12', name:'Hip Thrust (bench)',               sets:3, reps:[12,10,10], timed:false, unit:'total', note:'Upper back on bench, feet so shins are vertical at the top (never closer in), squeeze glutes, chin tucked. Log total bar/machine weight, or one dumbbell if single-leg',vid:'https://www.youtube.com/results?search_query=hip+thrust+bench+form'},
+      {id:'c2',  name:'Precor Seated Leg Curl',           sets:3, reps:[12,12,10], timed:false, unit:'total', note:'Knees at pivot, slow return, stop at about 90 degrees (no deep end range) - total stack weight',           vid:'https://www.youtube.com/results?search_query=seated+leg+curl+machine+form'},
+      {id:'c3',  name:'Step-Ups (low box)',               sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - max 6in box. Lean forward from the hips, shin near vertical, drive through heel. Log reps completed',                   vid:'https://www.youtube.com/results?search_query=step+up+VMO+quad+form'},
       {id:'c4',  name:'Glute Bridge Hold (weighted)',     sets:3, reps:[0,0,0],    timed:true,  note:'45 sec isometric hold - log any added weight in Notes',                vid:'https://www.youtube.com/results?search_query=glute+bridge+isometric+hold'},
       {id:'c6',  name:'Dead Bug',                         sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - back flat, opposite arm+leg, log reps completed',          vid:'https://www.youtube.com/results?search_query=dead+bug+exercise+form'},
-      {id:'c7',  name:'Bird Dog',                         sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - 10/side, spine neutral, log reps completed',               vid:'https://www.youtube.com/results?search_query=bird+dog+lower+back+core'},
+      {id:'c7',  name:'Bird Dog',                         sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - 10/side, spine neutral, pad under the knees, log reps completed',               vid:'https://www.youtube.com/results?search_query=bird+dog+lower+back+core'},
       {id:'c8',  name:'Forearm Plank',                    sets:3, reps:[0,0,0],    timed:true,  note:'30 sec, build to 60 sec',             vid:'https://www.youtube.com/results?search_query=forearm+plank+proper+form'},
-      {id:'c9',  name:'Med Ball Rotation (or Landmine)',  sets:3, reps:[12,12,12], timed:false, unit:'total', note:'12/side, controlled - total ball/attachment weight',                 vid:'https://www.youtube.com/results?search_query=medicine+ball+rotation+core'},
       {id:'c10', name:'Back Extension Machine',           sets:3, reps:[12,12,12], timed:false, unit:'total', note:'Squeeze glutes at top, no hyperextension - total added weight if any',vid:'https://www.youtube.com/results?search_query=back+extension+machine+form'}
     ],
     stretches: [
-      {id:'cs1', name:'Supine Hamstring Stretch',hint:'Band or towel around foot, knee slightly soft', time:'30-45 sec / side',vid:'https://www.youtube.com/results?search_query=supine+hamstring+stretch+band'},
+      {id:'cs1', name:'Supine Hamstring Stretch',target:'Per ortho referral', hint:'Band or towel around foot, knee slightly soft. Gentle range only, stop before it feels maximal.', time:'30-45 sec / side',vid:'https://www.youtube.com/results?search_query=supine+hamstring+stretch+band'}
+    ],
+    optional: [
       {id:'cs2', name:'Butterfly Stretch',       hint:'Soles together, press knees toward floor',     time:'30-45 sec',       vid:'https://www.youtube.com/results?search_query=butterfly+stretch+groin'},
       {id:'cs3', name:'Cobra Stretch',           hint:'Face down, press up through hands, hips on floor',time:'20-30 sec',   vid:'https://www.youtube.com/results?search_query=cobra+stretch+form'},
       {id:'cs4', name:'Childs Pose',             hint:'Kneel, sit back, arms forward, decompress lower back',time:'45 sec',  vid:'https://www.youtube.com/results?search_query=childs+pose+stretch'}
     ],
     cooldown: [
-      {id:'cc1', name:'Treadmill Cool-Down', hint:'Flush knee joint fluid. Especially important on leg days.', time:'10 min', vid:'https://www.youtube.com/results?search_query=treadmill+cool+down+walk'}
+      {id:'cc1', name:'Treadmill Cool-Down', hint:'Easy walk, slower than warm-up.', time:'10 min', vid:'https://www.youtube.com/results?search_query=treadmill+cool+down+walk'}
     ]
   },
   D: {
@@ -406,7 +412,8 @@ var D = {
       {id:'d7', name:'Heel Slides',                    sets:3, reps:[10,10,10], timed:false, unit:'reps',  note:'Bodyweight - lower back flat to floor, log reps completed',             vid:'https://www.youtube.com/results?search_query=heel+slides+core+postpartum'},
       {id:'d8', name:'Side Plank',                     sets:3, reps:[0,0,0],    timed:true,  note:'20-30 sec per side',                  vid:'https://www.youtube.com/results?search_query=side+plank+obliques+form'}
     ],
-    stretches: [
+    stretches: [],
+    optional: [
       {id:'ds1', name:'Lat Overhead Stretch', hint:'Hold rack, hinge at hips, stretch sideways',      time:'30 sec / side',vid:'https://www.youtube.com/results?search_query=lat+stretch+overhead+rack'},
       {id:'ds2', name:'Biceps Chest Opener',  hint:'Arms behind back, interlace fingers, open chest', time:'30 sec',       vid:'https://www.youtube.com/results?search_query=bicep+chest+opener+stretch'},
       {id:'ds3', name:'Childs Pose',          hint:'Kneel, sit back, arms forward',                   time:'45-60 sec',    vid:'https://www.youtube.com/results?search_query=childs+pose+stretch'}
@@ -633,16 +640,19 @@ function renderLog() {
   addSH('Main Workout', 'sh-m');
   day.exercises.forEach(function(ex) { lb.appendChild(makeExBlock(ex)); });
 
-  addSH('Post-Workout Stretches', 'sh-s');
-  var hint = document.createElement('p');
-  hint.style.cssText = 'font-size:12px;color:#5C6478;margin-bottom:9px;';
-  hint.textContent = 'Core 5 every session + Day ' + curDay + ' additions.';
-  lb.appendChild(hint);
-  CS.forEach(function(s) { lb.appendChild(makeCB(s, true)); });
-  day.stretches.forEach(function(s) { lb.appendChild(makeCB(s, true)); });
+  if (day.stretches.length) {
+    addSH('Per Ortho Referral', 'sh-s');
+    var hint = document.createElement('p');
+    hint.style.cssText = 'font-size:12px;color:#5C6478;margin-bottom:9px;';
+    hint.textContent = 'Your ortho listed this for PT. Ask your PT if you need it given your flexibility. Other stretches are optional, in the Stretch tab.';
+    lb.appendChild(hint);
+    day.stretches.forEach(function(s) { lb.appendChild(makeCB(s, true)); });
+  }
 
-  addSH('Cool-Down', 'sh-c');
-  day.cooldown.forEach(function(it) { lb.appendChild(makeCB(it, false)); });
+  if (day.cooldown && day.cooldown.length) {
+    addSH('Cool-Down', 'sh-c');
+    day.cooldown.forEach(function(it) { lb.appendChild(makeCB(it, false)); });
+  }
 }
 
 // -- TOGGLE CHECK ----------------------------------------------------------
@@ -720,9 +730,9 @@ function renderStretch() {
   var sl = el('s-day-lbl');
   sc.innerHTML = '';
   sd.innerHTML = '';
-  sl.textContent = 'Day ' + curDay + ' Additions';
+  sl.textContent = 'Day ' + curDay + ' (ortho referral + optional)';
   CS.forEach(function(s) { sc.appendChild(makeStrTab(s)); });
-  D[curDay].stretches.forEach(function(s) { sd.appendChild(makeStrTab(s)); });
+  D[curDay].stretches.concat(D[curDay].optional || []).forEach(function(s) { sd.appendChild(makeStrTab(s)); });
   updateProgress();
 }
 
@@ -755,7 +765,7 @@ function makeStrTab(s) {
 }
 
 function updateProgress() {
-  var all = CS.concat(D[curDay].stretches);
+  var all = CS.concat(D[curDay].stretches, D[curDay].optional || []);
   var total = all.length;
   var done = all.filter(function(s) { return !!checked[s.id]; }).length;
   var spn = el('sp-n');
